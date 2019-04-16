@@ -5,23 +5,18 @@
 }
 
 .huandeng image {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /*分类*/
 .index-nav {
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   background-color: #fff;
-  margin-top: 0px;
+  margin: 10px 0;
 }
 
-.index-nav view {
-  flex: 1;
-  flex-direction: column;
+.index-nav view:nth-child(2n) {
+  margin: 0 10px;
 }
 .index-nav image {
   width: 50px;
@@ -31,13 +26,20 @@ height: 100%;
 .index-nav text {
   font-size: 12px;
 }
-.nav1{
-width: 250rpx;
-display:flex;
-justify-content:center;
-align-items:center;
+
+.index-nav .nav {
+  display: inline-block;
+  margin-top: 10px;
 }
+
+.nav1 {
+  width: 250rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .a1 image{
-width: 750rpx;
-height: 300rpx;
+  width: 750rpx;
+  height: 300rpx;
 }
