@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class='huandeng'>
+<swiper indicator-dots="true" autoplay="true" interval="5000">
+  <block wx:for="{{imgUrls}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+
+<view class='section index-nav'>
+<navigator url="/pages/page1/index" hover-class="navigator-hover"><view class='nav1'><image src='/image/n1.png'></image><text>教育</text></view></navigator>
+<navigator url="/pages/page6/index" hover-class="navigator-hover"><view class='nav1'><image src='/image/n2.png'></image><text>小说</text></view></navigator>
+<navigator url="/pages/page3/index" hover-class="navigator-hover"><view class='nav1'><image src='/image/n3.png'></image><text>科技</text></view></navigator>
+</view>
+<view class='section index-nav'>
+<navigator url="/pages/page4/index" hover-class="navigator-hover"><view class='nav1'><image src='/image/n4.png'></image><text>生活</text></view></navigator>
+<navigator url="/pages/page5/index" hover-class="navigator-hover"><view class='nav1'><image src='/image/n5.png'></image><text>经济</text></view></navigator>
+<navigator url="/pages/details/details" hover-class="navigator-hover"><view class='nav1'><image src='/image/n6.png'></image><text>成功</text></view></navigator>
+</view>
+
+<view class='a1'><image bindtap="zhanshi1" src='/image/b3.jpg'></image></view>
+<view class='a1'><image bindtap="zhanshi2" src='/image/b2.jpg'></image></view>
+
+

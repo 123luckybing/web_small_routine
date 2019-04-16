@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/jieshao/index",
+    "pages/page1/index",
+    "pages/chanp/index",
+    "pages/page3/index",
+    "pages/page4/index",
+    "pages/page5/index",
+    "pages/page6/index",
+    "pages/details/details",
+    "pages/page8/index",
+    "pages/page9/index",
+    "pages/about/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1aad19",
+    "navigationBarTitleText": "旧书买卖商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/12.png",
+        "selectedIconPath": "image/11.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/chanp/index",
+        "iconPath": "image/32.png",
+        "selectedIconPath": "image/31.png",
+        "text": "产品展示"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "iconPath": "image/22.png",
+        "selectedIconPath": "image/21.png",
+        "text": "联系我们"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "iconPath": "image/22.png",
+        "selectedIconPath": "image/21.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "iconPath": "image/22.png",
+        "selectedIconPath": "image/21.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

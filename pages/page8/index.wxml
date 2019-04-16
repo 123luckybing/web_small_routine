@@ -1,0 +1,14 @@
+<view class="main">
+
+<view class="mcdesc"><view class="main-desc">
+<view class="paragraph">海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，</view>
+<view class="catinfo">
+        <image src="/image/a12.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">>海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，</view>
+<view class="catinfo">
+        <image src="/image/a11.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">>海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，海报展示内容，</view>
+</view></view>
+</view>

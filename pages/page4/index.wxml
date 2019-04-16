@@ -1,0 +1,14 @@
+<view class="main">
+
+<view class="mcdesc"><view class="main-desc">
+<view class="paragraph">公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，</view>
+<view class="catinfo">
+        <image src="/image/q2.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，</view>
+<view class="catinfo">
+        <image src="/image/q1.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，公司动态，</view>
+</view></view>
+</view>

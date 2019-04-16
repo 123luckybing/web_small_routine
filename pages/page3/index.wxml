@@ -1,0 +1,18 @@
+<view class="main">
+<view class="banner">
+        <image src="/image/d1.jpg" mode="aspectFill"></image>
+    </view>
+
+
+<view class="mcdesc"><view class="main-desc">
+
+<view class="catinfo">
+        <image src="/image/2.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">对案例进行描述对案例进行描述对案例进行描述对案例进行描述对案例进行描述</view>
+<view class="catinfo">
+        <image src="/image/3.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">对案例进行描述对案例进行描述对案例进行描述对案例进行描述对案例进行描述</view>
+</view></view>
+</view>

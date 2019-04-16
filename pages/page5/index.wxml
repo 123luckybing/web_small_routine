@@ -1,0 +1,14 @@
+<view class="main">
+
+<view class="mcdesc"><view class="main-desc">
+<view class="paragraph">爬行者网络工作室是一家专业的摄影工作室,我们每月都有新场景,每月都有新样片,每天都有新客照,我们卖的质量和服务,我们呈现的是尊贵和高端,我们只做定制级婚纱摄影.</view>
+<view class="catinfo">
+        <image src="/image/a2.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">服务小众，品质高端，主营业务为高端私人婚纱摄影、高端个人写真、高端儿童私人摄影、商业摄影等。</view>
+<view class="catinfo">
+        <image src="/image/a1.jpg" class="catinfo-thumb"mode="aspectFill"></image>
+    </view>
+<view class="paragraph">一直坚持“驻留温情怀念，呈现灵动瞬间”的服务理念，拍摄了大量时尚、专业图片，摄影作品散见于报刊、杂志及各大摄影网站，时尚、清新、独特的摄影风格广受好评与肯定。</view>
+</view></view>
+</view>

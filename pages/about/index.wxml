@@ -1,0 +1,36 @@
+<loading hidden="{{loadingHide}}">
+  {{loadingText}}
+</loading>
+<!--pages/home/home.wxml-->
+<view class="banner">
+        <image src="/image/lx.jpg" mode="aspectFill"></image>
+    </view>
+
+
+<view class="IndexList">
+  <view bindtap="callmeTap">
+    <image src="../../image/tel.png" class="telIco" mode="widthFix"></image>
+    <text class="tel" bindtap="teltoUs">电话：18800027000</text>
+  </view>
+  <view>
+    <image src="../../image/weixin.png" class="weixinIco" mode="widthFix"></image>
+    <text class="map">微信：二手旧书交易平台</text>
+  </view>
+  <view>
+    <image src="../../image/email.png" class="eIco" mode="widthFix"></image>
+    <text class="email">邮件：ershoujiushu@163.com </text>
+  </view>
+  <view>
+    <image src="../../image/map.png" class="mapIco" mode="widthFix"></image>
+    <text class="map" bindtap="click">东北农业大学北六</text>
+  </view>
+</view>
+	<view class="goods-box">
+
+ <button class="goods-operation" open-type="contact">联系我们</button>
+</view>
+
+
+<view class="footer">
+  @2019 二手旧书交易 版权所有
+</view>
