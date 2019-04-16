@@ -8,9 +8,8 @@ Page({
       '/image/a13.jpeg',
       '/image/a14.jpeg'
     ],
-    
+    kindList: []
   },
-
   zhanshi1() {
     wx.navigateTo({
       // url: '/pages/page9/index'
@@ -23,13 +22,6 @@ Page({
     })
   },
 
-  onShareAppMessage: function () {
-    return {
-      title: '分享标题：中晋木门展销助手',
-      path: ''
-    }
-  },
-
 
 
   //事件处理函数
@@ -39,6 +31,20 @@ Page({
     })
   },
   onLoad: function () {
+    const kind = this;
+    wx.request({
+      url: app.globalData.URL + '/kind/list',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      data: {},
+      method: 'POST',
+      success(res) {
+        kind.setData({
+          kindList: res.data.list
+        })
+      }
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

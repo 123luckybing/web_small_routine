@@ -1,33 +1,28 @@
 // page/new-pages/user/user.js
+const app = getApp()
 Page({
-  data:{
-    goods: {
-      id: 1,
-      image: '/image/b1.jpg',
-      image2: '/image/b2.jpg',
-      image3: '/image/b3.jpg',
-      image4: '/image/b4.jpg'
-    },
-	latitude: 25.060327,
-    longitude: 116.410711,
-	covers: [{
-      latitude: 25.060327,
-      longitude: 116.410711,
-    }],
-	markers: [{
-      latitude: 25.060327,
-	  longitude: 116.410711,
-
-    }],
-	accuracy: 16,
-    thumb:'',
-    nickname:'',
-    
-    hasAddress:false,
-    address:{}
+  onLoad: function(options) {
+    const kind = this;
+    var kindName = options.name
+    wx.request({
+      url: app.globalData.URL + '/goods/list',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      data: {
+        name: '',
+        kind: kindName
+      },
+      method: 'POST',
+      success(res) {
+        console.log(res.data.list)
+        kind.setData({
+          kindList: res.data.list
+        })
+      }
+    })
   },
-
-  
-  onShow(){
+  data: {
+    kindList: []
   }
 })
