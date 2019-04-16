@@ -1,8 +1,12 @@
 /**index.wxss**/
 /*图片轮播*/
-.huandeng image{
+.swiper {
+  height: 200px;
+}
+
+.huandeng image {
 width: 100%;
-height: 450rpx;
+height: 100%;
 }
 
 /*分类*/

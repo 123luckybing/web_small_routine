@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class='huandeng'>
-<swiper indicator-dots="true" autoplay="true" interval="5000">
+<swiper indicator-dots="true" class='swiper' autoplay="true" interval="5000">
   <block wx:for="{{imgUrls}}" wx:key="key">
     <swiper-item>
       <image src="{{item}}"/>

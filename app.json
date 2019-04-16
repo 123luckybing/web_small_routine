@@ -1,18 +1,20 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/chanp/index",
+    "pages/car/index",
+    "pages/about/index",
+
+    "pages/logs/logs", 
     "pages/jieshao/index",
     "pages/page1/index",
-    "pages/chanp/index",
     "pages/page3/index",
     "pages/page4/index",
     "pages/page5/index",
     "pages/page6/index",
     "pages/details/details",
     "pages/page8/index",
-    "pages/page9/index",
-    "pages/about/index"
+    "pages/page9/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,18 +38,12 @@
         "pagePath": "pages/chanp/index",
         "iconPath": "image/32.png",
         "selectedIconPath": "image/31.png",
-        "text": "产品展示"
+        "text": "上门收书"
       },
       {
-        "pagePath": "pages/about/index",
-        "iconPath": "image/22.png",
-        "selectedIconPath": "image/21.png",
-        "text": "联系我们"
-      },
-      {
-        "pagePath": "pages/about/index",
-        "iconPath": "image/22.png",
-        "selectedIconPath": "image/21.png",
+        "pagePath": "pages/car/index",
+        "iconPath": "image/car.png",
+        "selectedIconPath": "image/car_select.png",
         "text": "购物车"
       },
       {
