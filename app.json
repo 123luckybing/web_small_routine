@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/chanp/index",
     "pages/car/index",
     "pages/about/index",
     "pages/page1/index",
 
     "pages/logs/logs", 
+    "pages/chanp/index",
     "pages/jieshao/index",
     "pages/page3/index",
     "pages/page4/index",
@@ -35,7 +35,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/chanp/index",
+        "pagePath": "pages/about/index",
         "iconPath": "image/32.png",
         "selectedIconPath": "image/31.png",
         "text": "上门收书"

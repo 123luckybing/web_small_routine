@@ -1,35 +1,39 @@
-<loading hidden="{{loadingHide}}">
-  {{loadingText}}
-</loading>
-<!--pages/home/home.wxml-->
 <view class="banner">
-        <image src="/image/lx.jpg" mode="aspectFill"></image>
-    </view>
-
-
-<view class="IndexList">
-  <view bindtap="callmeTap">
-    <image src="../../image/tel.png" class="telIco" mode="widthFix"></image>
-    <text class="tel" bindtap="teltoUs">电话：18800027000</text>
-  </view>
-  <view>
-    <image src="../../image/weixin.png" class="weixinIco" mode="widthFix"></image>
-    <text class="map">微信：二手旧书交易平台</text>
-  </view>
-  <view>
-    <image src="../../image/email.png" class="eIco" mode="widthFix"></image>
-    <text class="email">邮件：ershoujiushu@163.com </text>
-  </view>
-  <view>
-    <image src="../../image/map.png" class="mapIco" mode="widthFix"></image>
-    <text class="map" bindtap="click">东北农业大学北六</text>
-  </view>
-</view>
-	<view class="goods-box">
-
- <button class="goods-operation" open-type="contact">联系我们</button>
+  <image src="/image/lx.jpg" mode="aspectFill"></image>
 </view>
 
+<form bindsubmit="formSubmit" bindreset="formReset" class="IndexList">
+  <view class="section section_gap">
+    <image src="../../image/recycle-01.png" class="weixinIco" mode="widthFix"></image>
+    <input name='name' placeholder="请输入书名" class='tel'/>
+  </view>
+  <view class="section section_gap">
+    <image src="../../image/recycle-02.png" class="weixinIco" mode="widthFix"></image>
+    <input name='number' placeholder="请输入数量" class='tel'/>
+  </view>
+  <view class="section section_gap">
+    <image src="../../image/recycle-03.png" class="weixinIco" mode="widthFix"></image>
+    <picker name='kindName' class='tel' bindchange="bindPickerChange" value="{{kindList[index].name}}" range="{{kindList}}" range-key="{{'name'}}">
+      <span class='kindTitle'>请选择种类</span>: {{kindList[index].name}}
+    </picker>
+  </view>
+  <view class="section section_gap">
+    <image src="../../image/recycle-04.png" class="weixinIco" mode="widthFix"></image>
+    <input name='seller' placeholder="请输入您的姓名" class='tel'/>
+  </view>
+    <view class="section section_gap">
+    <image src="../../image/recycle-05.png" class="telIco" mode="widthFix"></image>
+    <input class='tel' name='mobileNo' placeholder="请输入电话号码"/>
+  </view>
+    <view class="section section_gap">
+    <image src="../../image/recycle-06.png" class="telIco" mode="widthFix"></image>
+    <input class='tel' name='address' placeholder="请输入上门地址"/>
+  </view>
+  <div class="btn-area">
+    <button formType="submit" size='mini'>提交</button>
+    <button formType="reset" size='mini'>重置</button>
+  </div>
+</form>
 
 <view class="footer">
   @2019 二手旧书交易 版权所有
