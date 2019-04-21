@@ -4,15 +4,15 @@
     "pages/car/index",
     "pages/about/index",
     "pages/page1/index",
+    "pages/chanp/index",
+    "pages/details/details",
 
     "pages/logs/logs", 
-    "pages/chanp/index",
     "pages/jieshao/index",
     "pages/page3/index",
     "pages/page4/index",
     "pages/page5/index",
     "pages/page6/index",
-    "pages/details/details",
     "pages/page8/index",
     "pages/page9/index"
   ],
@@ -47,7 +47,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/about/index",
+        "pagePath": "pages/chanp/index",
         "iconPath": "image/22.png",
         "selectedIconPath": "image/21.png",
         "text": "我的"

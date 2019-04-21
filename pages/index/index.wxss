@@ -44,7 +44,24 @@
   align-items:center;
 }
 
+.a1,
+.a2 {
+  position: relative;
+}
+
 .a1 image{
   width: 750rpx;
   height: 400rpx;
+}
+
+.a1 view,
+.a2 view {
+  background: rgba(0,0,0,.5);
+  border-radius: .5px 2px .5px .5px;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 5px;
+  position: absolute;
+  right: 0;
+  bottom: 12rpx;
 }

@@ -7,7 +7,6 @@ page{
 .navigator-hover{
     background: none;
 }
-
 .goods-box{
     position: relative;
     text-align: center;
@@ -115,7 +114,15 @@ page{
     box-sizing: border-box;
     text-align: center;
     color: #c7c7cb;
-	
 }
 
 .ubom{clear:both;width:92%;height:20rpx;border-bottom:1px solid #eee;margin:20rpx auto;}
+.section input {
+    border: 1rpx solid #ccc;
+    border-radius: 10rpx;
+}
+
+.section {
+    width:92%;
+    margin: 0 auto 50rpx; 
+}

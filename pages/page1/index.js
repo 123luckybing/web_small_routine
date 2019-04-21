@@ -1,6 +1,12 @@
 // page/new-pages/user/user.js
 const app = getApp()
 Page({
+  goDetail(e) {
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../details/details?id=' + id 
+    })
+  },
   onLoad: function(options) {
     const kind = this;
     var kindName = options.name
@@ -15,7 +21,6 @@ Page({
       },
       method: 'POST',
       success(res) {
-        console.log(res.data.list)
         kind.setData({
           kindList: res.data.list
         })

@@ -18,6 +18,10 @@
     </picker>
   </view>
   <view class="section section_gap">
+    <image src="../../image/recycle-02.png" class="weixinIco" mode="widthFix"></image>
+    <input name='isbn' placeholder="请输入书号" class='tel'/>
+  </view>
+  <view class="section section_gap">
     <image src="../../image/recycle-04.png" class="weixinIco" mode="widthFix"></image>
     <input name='seller' placeholder="请输入您的姓名" class='tel'/>
   </view>

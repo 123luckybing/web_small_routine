@@ -25,6 +25,9 @@ Page({
       name: {
         required: true
       },
+      isbn: {
+        required: true
+      },
       number: {
         required: true,
       },
@@ -60,6 +63,9 @@ Page({
       },
       address: {
         required: '请输入上门地址',
+      },
+      isbn: {
+        required: '请输入书号',
       }
     }
     this.WxValidate = new WxValidate(rules, messages)
@@ -86,14 +92,13 @@ Page({
   },
   formSubmit(e) {
     const params = e.detail.value
-    const that = this
+    params.isbn = parseInt(params.isbn)
     // 校验表单
     if (!this.WxValidate.checkForm(params)) {
       const error = this.WxValidate.errorList[0]
       this.showToast(error)
       return false
     } else {
-      console.log(e.detail.value)
       wx.request({
         url: app.globalData.URL + '/recycle/add',
         header: {
@@ -121,7 +126,6 @@ Page({
               wx.hideToast()
             }, 2000)
           }
-          console.log(res)
         }
       })
     }

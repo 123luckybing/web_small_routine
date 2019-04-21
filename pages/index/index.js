@@ -10,15 +10,14 @@ Page({
     ],
     kindList: []
   },
-  zhanshi1() {
+  picFirst() {
     wx.navigateTo({
-      // url: '/pages/page9/index'
-      url: 'http://localhost:8080/find', 
+      url: '../details/details?id=1'
     })
   },
-  zhanshi2() {
+  picSecond() {
     wx.navigateTo({
-      url: '/pages/page8/index'
+      url: '../details/details?id=2'
     })
   },
 
@@ -73,7 +72,6 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

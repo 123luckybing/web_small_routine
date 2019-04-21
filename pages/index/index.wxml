@@ -14,7 +14,13 @@
   <navigator url="../page1/index?name={{ item.name }}" wx:key="{{ index }}" wx:for="{{ kindList }}" hover-class="navigator-hover" class='nav'><view class='nav1'><image src="{{ item.image }}"></image><text>{{ item.name }}</text></view></navigator>
 </view>
 
-<view class='a1'><image bindtap="zhanshi1" src='/image/top1.jpg'></image></view>
-<view class='a1'><image bindtap="zhanshi2" src='/image/top2.jpg'></image></view>
+<view class='a1'>
+  <image bindtap="picFirst" src='/image/top1.jpg'></image>
+  <view>精品推荐No1</view>
+</view>
+<view class='a1'>
+  <image bindtap="picSecond" src='/image/top2.jpg'></image>
+  <view>精品推荐No2</view>
+</view>
 
 

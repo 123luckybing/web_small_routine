@@ -1,13 +1,15 @@
-<view class='item' wx:for="{{kindList}}">
-  <view class='img'>
-    <image src="{{ item.image }}" />
-  </view>
-  <view class='detail'>
-    <div class='name'>{{ item.name }}</div>
-    <div class='price'>¥{{ item.price }}</div>
-    <div class='tip'>
-        <span>库存: {{ item.number }} </span>
-        <span>图书种类: {{ item.kind }}</span>
-    </div>
+<view class='item' wx:for="{{kindList}}" wx:key='{{index}}'>
+  <view bindtap='goDetail' data-id="{{item.id}}">
+    <view class='img'>
+      <image src="{{ item.image }}" />
+    </view>
+    <view class='detail'>
+      <div class='name'>{{ item.name }}</div>
+      <div class='price'>¥{{ item.price }}</div>
+      <div class='tip'>
+          <span>库存: {{ item.number }} </span>
+          <span>图书种类: {{ item.kind }}</span>
+      </div>
+    </view>
   </view>
 </view>
