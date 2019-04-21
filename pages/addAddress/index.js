@@ -1,173 +1,73 @@
-// pages/address/user-address/user-address.js
 var app = getApp()
+import WxValidate from '../../utils/WxValidate'
 Page({
   data: {
-    address: [],
-    radioindex: '',
-    pro_id:0,
-    num:0,
-    cartId:0
   },
-  onLoad: function (options) {
-    var that = this;
-    // 页面初始化 options为页面跳转所带来的参数
-    var cartId = options.cartId;
-    wx.request({
-      url: app.d.ceshiUrl + '/Api/Address/index',
-      data: {
-        user_id:app.d.userId,
+  onLoad() {
+    this.initValidate()
+  },
+  formReset() {
+  },
+  initValidate() {
+    const rules = {
+      name: {
+        required: true
       },
-      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {// 设置请求的 header
-        'Content-Type':  'application/x-www-form-urlencoded'
+      mobileNo: {
+        required: true
       },
-      
-      success: function (res) {
-        // success
-        var address = res.data.adds;
-        if (address == '') {
-          var address = []
-        }
-        that.setData({
-          address: address,
-          cartId: cartId,
-        })
-      },
-      fail: function () {
-        // fail
-        wx.showToast({
-          title: '网络异常！',
-          duration: 2000
-        });
+      address: {
+        required: true,
       }
+    }
+    const messages = {
+      name: {
+        required: '请输入收货人姓名',
+      },
+      mobileNo: {
+        required: '请输入电话号码',
+      },
+      address: {
+        required: '请输入详细地址',
+      }
+    }
+    this.WxValidate = new WxValidate(rules, messages)
+  },
+  // 报错
+  showToast(error) {
+    wx.showToast({
+      title: error.msg,
+      icon: 'none'
     })
-    
   },
-
-  onReady: function () {
-    // 页面渲染完成
-  },
-  setDefault: function(e) {
-    var that = this;
-    var addrId = e.currentTarget.dataset.id;
-    wx.request({
-      url: app.d.ceshiUrl + '/Api/Address/set_default',
-      data: {
-        uid:app.d.userId,
-        addr_id:addrId
-      },
-      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {// 设置请求的 header
-        'Content-Type':  'application/x-www-form-urlencoded'
-      },
-      
-      success: function (res) {
-        // success
-        var status = res.data.status;
-        var cartId = that.data.cartId;
-        if(status==1){
-          if (cartId && cartId!=0) {
-            wx.redirectTo({
-              url: '../../order/pay?cartId=' + cartId,
-            });
-            return false;
-          }
-
+  // 提交表单
+  formSubmit: function(e) {
+    e.detail.value.openId = 0
+    const data = e.detail.value
+    if (!this.WxValidate.checkForm(data)) {
+      const error = this.WxValidate.errorList[0]
+      this.showToast(error)
+      return false
+    } else {
+      const dataRes = JSON.stringify(data)
+      wx.request({
+        url: app.globalData.URL + '/address/add',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        data: dataRes,
+        method: 'POST',
+        success(res) {
           wx.showToast({
-            title: '操作成功！',
-            duration: 2000
-          });
-          
-          that.DataonLoad();
-        }else{
-          wx.showToast({
-            title: res.data.err,
-            duration: 2000
-          });
+            title: res.data.msg,
+            duration: 1000,
+            mask:true
+          })
+          setTimeout(function(){
+            wx.hideToast()
+          }, 2000)
         }
-      },
-      fail: function () {
-        // fail
-        wx.showToast({
-          title: '网络异常！',
-          duration: 2000
-        });
-      }
-    })
-  },
-  delAddress: function (e) {
-    var that = this;
-    var addrId = e.currentTarget.dataset.id;
-    wx.showModal({
-      title: '提示',
-      content: '你确认移除吗',
-      success: function(res) {
-        res.confirm && wx.request({
-          url: app.d.ceshiUrl + '/Api/Address/del_adds',
-          data: {
-            user_id:app.d.userId,
-            id_arr:addrId
-          },
-          method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-          header: {// 设置请求的 header
-            'Content-Type':  'application/x-www-form-urlencoded'
-          },
-          
-          success: function (res) {
-            // success
-            var status = res.data.status;
-            if(status==1){
-              that.DataonLoad();
-            }else{
-              wx.showToast({
-                title: res.data.err,
-                duration: 2000
-              });
-            }
-          },
-          fail: function () {
-            // fail
-            wx.showToast({
-              title: '网络异常！',
-              duration: 2000
-            });
-          }
-        });
-      }
-    });
-
-  },
-  DataonLoad: function () {
-    var that = this;
-    // 页面初始化 options为页面跳转所带来的参数
-    wx.request({
-      url: app.d.ceshiUrl + '/Api/Address/index',
-      data: {
-        user_id:app.d.userId,
-      },
-      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {// 设置请求的 header
-        'Content-Type':  'application/x-www-form-urlencoded'
-      },
-      
-      success: function (res) {
-        // success
-        var address = res.data.adds;
-        if (address == '') {
-          var address = []
-        }
-        that.setData({
-          address: address,
-        })
-      },
-      fail: function () {
-        // fail
-        wx.showToast({
-          title: '网络异常！',
-          duration: 2000
-        });
-      }
-    })
-    
+      })
+    }
   },
 })

@@ -8,7 +8,8 @@
     "pages/user/index",
     "pages/address/index",
     "pages/order/index",
-    "pages/addAddress/index"
+    "pages/addAddress/index",
+    "pages/mineGet/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

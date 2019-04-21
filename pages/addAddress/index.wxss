@@ -23,7 +23,7 @@ button {
   position: relative;
   top:100rpx;
   color: #fff;
-  background-color: #d9002f;
+  background-color: #1aad19;
   border-radius: 60rpx;
 }
 
@@ -35,3 +35,6 @@ button {
   width: 500rpx;
 }
 
+.clear {
+  margin-top: 20rpx;
+}

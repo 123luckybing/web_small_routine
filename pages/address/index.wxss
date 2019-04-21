@@ -23,13 +23,12 @@ page {
 }
 
 .address-detail {
-  width: 590rpx;
+  width: 100%;
 }
 
 .address-name-phone {
   margin-bottom: 20rpx;
   font-size: 11pt;
-  font-weight: 900;
 }
 
 .address-name{
@@ -55,7 +54,6 @@ page {
   padding: 18rpx;
   background-color: #fff;
   font-size: 11pt;
-  font-weight: 900;
 }
 
 .add-address-icon {
