@@ -4,22 +4,15 @@
     "pages/car/index",
     "pages/about/index",
     "pages/page1/index",
-    "pages/chanp/index",
     "pages/details/details",
-
-    "pages/logs/logs", 
-    "pages/jieshao/index",
-    "pages/page3/index",
-    "pages/page4/index",
-    "pages/page5/index",
-    "pages/page6/index",
-    "pages/page8/index",
-    "pages/page9/index"
+    "pages/user/index",
+    "pages/address/index",
+    "pages/order/index",
+    "pages/addAddress/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1aad19",
-    "navigationBarTitleText": "旧书买卖商城",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -47,7 +40,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/chanp/index",
+        "pagePath": "pages/user/index",
         "iconPath": "image/22.png",
         "selectedIconPath": "image/21.png",
         "text": "我的"

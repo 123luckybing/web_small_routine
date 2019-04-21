@@ -1,0 +1,20 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <input type="text" hidden="true" value="{{mid}}" name="user_id"/>
+      收货用户：<input type="text" name="name" placeholder="收货人姓名" />
+    </view>
+    <view class="section">
+      电话号码：<input type="text" name="phone" placeholder="电话号码" />
+    </view>
+    <view class="section">
+      详细地址：<input type="text" class="ww" name="address" placeholder="详细地址" />
+    </view>
+    <view>
+      <label></label>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">保存地址</button>
+    </view>
+  </form>
+</view>

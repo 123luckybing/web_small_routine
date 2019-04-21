@@ -1,0 +1,6 @@
+<navigator url="../addAddress/index">
+  <view hidden="{{hiddenAddress}}" class="add-address">
+    <image class="add-address-icon" src="#"></image>
+    <view>新增地址</view>
+  </view>
+</navigator>
