@@ -16,7 +16,7 @@
   position: relative;
   width: 750rpx;
   height: 340rpx;
-  background: #d9002f;
+  background: #abc88b;
   color: #fff;
   display: flex;
   flex-direction: column;

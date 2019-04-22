@@ -1,0 +1,12 @@
+
+<view class="address" wx:for="{{addressList}}" wx:key="{{value}}">
+  <view class="address-detail" data-id="{{item.id}}" bindtap="select">
+    <view class="address-name-phone">
+      <text class="address-phone">联系方式：{{item.mobileNo}}</text>
+    </view>
+     <view class="address-name-phone">
+      <text class="address-name">收货人姓名：{{item.name}}</text>
+    </view>
+    <view class="address-info">收货地址：{{item.address}}</view>
+  </view>
+</view>

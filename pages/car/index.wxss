@@ -15,15 +15,6 @@ page{  background: white;}
 }
 .shop checkbox{ 
     margin-top: 54rpx;
-    }
-.sh_slt{
-    width: 160rpx;
-    height: 160rpx;
-    overflow: hidden;
-    border-radius: 10rpx;
-    margin-right: 4%;
-    margin-left: 3%;
-    float: left;
 }
 .sp_text{
     float: left;
@@ -117,25 +108,18 @@ page{  background: white;}
   display: flex;
   flex-direction: column;
   padding: 20rpx 40rpx;
-   background: #fff;
+  background: #fff;
 }
  
 /*每行单元格*/
 .carts-item {
   display: flex;
   flex-direction: row;
-  height:150rpx;
+  position: relative;
   /*width属性解决标题文字太短而缩略图偏移*/
   width:100%;
   border-bottom: 2rpx solid #eee;
   padding: 30rpx 0;
-}
- 
-/*左部图片*/
-.carts-image {
-  margin-top:5%;
-  width:150rpx;
-  height:150rpx;
 }
  
  
@@ -149,14 +133,12 @@ page{  background: white;}
  
 /*右上部分标题*/
 .carts-title {
-  margin: 10rpx;
   font-size: 24rpx;
 } 
 /*右下部分价格与数量*/
 .carts-subtitle {
   font-size: 25rpx;
   color:darkgray;
-  padding: 0 20rpx;
   display: flex;
   flex-direction: row;
   justify-content:space-between;
@@ -171,19 +153,11 @@ page{  background: white;}
   width: 100%;
   height: 80rpx;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-   position: fixed;
-    bottom: 0;
-    border-top: 2rpx solid #eee;
-    background: #eee;
-    z-index:999;
-}
-/*复选框*/
-.carts-footer icon {
-  margin-left: 20rpx;
-  margin-top: 10rpx;
-  color: #fff;
+  position: fixed;
+  bottom: 0;
+  border-top: 2rpx solid #eee;
+  background: #eee;
+  z-index:999;
 }
  
 /*全选字样*/
@@ -197,72 +171,26 @@ page{  background: white;}
 .carts-footer .button {
   line-height: 80rpx;
   text-align: center;
-  width:220rpx;
+  flex: 1;
   height: 80rpx;
-  background-color: #dd2727;
+  background-color: #abc88b;
   color: white;
   font-size: 36rpx;
   font-weight: 700;
   border-radius: 0;
-  border: 0;
+  border: 1px solid #ccc;
 }
-.stepper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 36rpx;
-}
-.stepper text {
-  background-color: #f2f2f2;
-  margin: 10rpx 0;
-  width: 52rpx;
-  height: 52rpx;
-  line-height: 52rpx;
-  text-align: center;
-  font-weight: 900;
-  color: #939393;
-  border-radius:60rpx; 
-  border:2rpx solid #fff;
-}
-.stepper input {
-  width: 112rpx;
-  height: 50rpx;
-  text-align: center;
-  border-radius:60rpx; 
-  border-top: 2rpx solid #f2f2f2;
-  border-bottom: 2rpx solid #f2f2f2
-}
-.modal-close{
-    margin-left:200rpx ;
-    padding: 10rpx;
-    width: 20rpx;
-    height: 20rpx;  
-    color: red;
-    border: 2rpx solid red;
-    border-radius:20rpx; 
-}
-.page{
-  
-    padding-bottom: 60rpx;
-}
-.reds{
-    color: red;
-}
-
-
-.pp{
-  text-align: center;
-  margin-top: 45%;
-}
-.cla{
-      font-family: '微软雅黑';
-      color: #ccc;
-}
-
 .del{
-  width:40rpx;
-  height:40rpx;
-  position:relative;
-  margin-left:180rpx;
+  position: absolute;
+  bottom: 30rpx;
+  right: 0;
+  font-size: 30rpx;
+}
+
+.page {
+  margin-bottom: 60rpx;
+}
+
+.reds {
+  color: red;
 }
