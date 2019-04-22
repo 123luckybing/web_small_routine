@@ -1,11 +1,11 @@
 <view class="sp_text" wx:for="{{bookList}}" wx:key="{{index}}">
-  <view class="sp_tit ovh1">序号：{{item.id}}</view>
+  <view class="sp_neb">序号：{{item.id}}</view>
   <view class="sp_neb">书籍名称： {{item.name}}</view>
-   <view class="sp_jg">书号：{{item.isbn}}</view>
+   <view class="sp_neb">书号：{{item.isbn}}</view>
   <view class="sp_neb">分类： {{item.kindName}}</view>
   <view class="sp_neb">数量：{{item.number}}</view>
-  <view class="sp_jg">卖家姓名：{{item.seller}}</view>
-  <view class="sp_jg">联系方式：{{item.mobileNo}}</view>
-  <view class="sp_jg">上门地址：{{item.address}}</view>
-  <view class="sp_jg">创建时间：{{item.createTime}}</view>
+  <view class="sp_neb">卖家姓名：{{item.seller}}</view>
+  <view class="sp_neb">联系方式：{{item.mobileNo}}</view>
+  <view class="sp_neb">上门地址：{{item.address}}</view>
+  <view class="sp_neb">创建时间：{{item.createTime}}</view>
 </view>
